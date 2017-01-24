@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Nav Bar</title>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<!-- JQuery -->
+	<script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Brand</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">Link</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="navbar-form navbar-left">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Link</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<h1>Navbar</h1>
+	<ul>
+		<li> Nav bars are responsive meta components that serve as navigation headers for your app or site. they begin collapsed and are toggleable in moblie views and become horizontal as the available viewport width increases.</li>
+	</ul>
+<h1>Overflowing content</h1>
+	<ul>
+		<li>Since bootstrap doesn't know how much space the content in your navbar needs, you might run into issues with content wrapping into a second row. to resolve this you can:</li>
+		<ol>
+			<li>Reduce the amount or width of the navbar</li>
+			<li>Hide certian navbar items at certian screen sizes using responsive utility classes</li>
+			<li> Change the point at which your navbar switches between collapsed and horizontal mode. Customize the <code>@grid-fload-breakpoint</code> variable or add your own media query.</li>
+		</ol>
+	</ul>
+<h1>Requires JS plugin</h1>
+	<ul>
+		<li>If javascript is disabled and the viewport is narrow enough that the navbar collapses, it will be impossible to expand the navbar and view the content within the <code>.navbar-collapse</code></li>
+	</ul>
+<h1>Changing the collapsed moblie navbar breakpoint</h1>
+	<ul>
+		<li>The navbar collapses into its vertical mobile view when the viewport is narrower than <code>@grid-float-breakpoint</code>, and expands into its horizontal non-mobile view when the viewport is at least <code>@grid-float-breakpoint</code> in width. Adjust this variable in the Less source to control when the navbar collapses/expands. The default value is 768px (the smallest "small" or "tablet" screen).</li>
+	</ul>
+<h1>make navbars accessible</h1>
+	<ul>
+		<li>Be sure to use a <code>&lt;nav&gt;</code> element or, if using a more generic element such as <code>&lt;div&gt;</code>, add a <code>role="navigation"</code> to every navbar to explicityly identify it as a landmark region for users of assistive technologies.</li>
+	</ul>
+<h1>Forms</h1>
+	<ul>
+		<li>Place form content within <code>.navbar-form</code> for proper vertical alignment and collapsed behavior in narrow viewports. </li>
+		<li> As a heads up, <code>.navbar-form</code> shares much of its code with <code>.form-inline</code> via mixin. Some form controls like input gorups, may require fixed withs to show up properly within a navbar <pre>
+			&lt;form class="navbar-form navbar-left" role="search"&gt;
+  			&lt;div class="form-group"&gt;
+   			&lt;input type="text" class="form-control" placeholder="Search"&gt;
+  			&lt;/div&gt;
+  			&lt;button type="submit" class="btn btn-default"&gt;Submit&lt;/button&gt;
+			&lt;/form&gt;
+		</pre></li>
+	</ul>
+<h1>Other usefull navbar features</h1>	
+	<ul>
+		<li>Buttons <code>.navbar-btn</code></li>
+		<li>Text <code>.navbar-text</code></li>
+		<li>Non-Nav Links</li>
+		<li>Inverted navbar</li>
+		<li>Fixed to bottom</li>
+		<li>Fixed to top</li>
+		<li>Static</li>
+	</ul>
+
+</body>
+</html>
